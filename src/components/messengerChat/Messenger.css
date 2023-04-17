@@ -1,0 +1,12 @@
+.messenger-chat-div{
+    position: fixed;
+    right: 1.5rem;
+    bottom: 10rem;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    padding: 17px;
+    outline: none;
+    border-radius: 10rem;
+    font-size: 1.5rem;
+}
