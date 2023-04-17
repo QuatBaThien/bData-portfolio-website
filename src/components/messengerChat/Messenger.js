@@ -1,5 +1,6 @@
 import React from "react";
 import MessengerCustomerChat from 'react-messenger-customer-chat';
+import "./Messenger.css";
 
 export default function Messenger(props) {
     return (
