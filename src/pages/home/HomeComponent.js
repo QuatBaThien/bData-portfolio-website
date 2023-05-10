@@ -5,6 +5,7 @@ import Skills from "../../containers/skills/Skills";
 import Footer from "../../components/footer/Footer";
 import Messenger from "../../components/messengerChat/Messenger"
 import TopButton from "../../components/topButton/TopButton";
+import Organizations from "../../containers/organizations/Organizations";
 // import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 class Home extends Component {
@@ -14,6 +15,7 @@ class Home extends Component {
         <Header theme={this.props.theme} />
         <Greeting theme={this.props.theme} />
         <Skills theme={this.props.theme} />
+        <Organizations theme={this.props.theme} />
         <Footer theme={this.props.theme} />
         <TopButton theme={this.props.theme} />
         <Messenger theme={this.props.theme}/>,

@@ -71,7 +71,7 @@ class Header extends Component {
                 >
                   Experience
                 </NavLink>
-              </li>
+              </li>*/}
               <li>
                 <NavLink
                   to="/projects"
@@ -81,21 +81,21 @@ class Header extends Component {
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
-                  Projects
+                 Pricing
                 </NavLink>
-              </li>  */}
-              <li>
-                <NavLink
-                  to="/opensource"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Partner
-                </NavLink>
-              </li>
+              </li>  
+                {/* <li>
+                  <NavLink
+                    to="/opensource"
+                    tag={Link}
+                    activeStyle={{ fontWeight: "bold" }}
+                    style={{ color: theme.text }}
+                    onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
+                    onMouseOut={(event) => onMouseOut(event)}
+                  >
+                    Partner
+                  </NavLink>
+                </li> */}
               <li>
                 <NavLink
                   to="/contact"

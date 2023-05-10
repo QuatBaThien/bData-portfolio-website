@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
-import GithubRepoCard from "../../components/githubRepoCard/GithubRepoCard";
-import PublicationCard from "../../components/publicationsCard/PublicationCard";
 import Button from "../../components/button/Button";
 import TopButton from "../../components/topButton/TopButton";
-import { Fade } from "react-reveal";
+import { Fade } from "react-reveal"; 
+import { BiCheckboxSquare } from "react-icons/bi";
 import {
   greeting,
   projectsHeader,
@@ -15,6 +14,8 @@ import {
 import ProjectsData from "../../shared/opensource/projects.json";
 import "./Projects.css";
 import ProjectsImg from "./ProjectsImg";
+import {PricingTable, PricingSlot, PricingDetail} from 'react-pricing-table';
+import RegistrationForm from "../../components/form/RegisterForm";
 
 class Projects extends Component {
   render() {
@@ -39,59 +40,51 @@ class Projects extends Component {
                 >
                   {projectsHeader.title}
                 </h1>
-                <p
+                {/* <p
                   className="projects-header-detail-text subTitle"
                   style={{ color: theme.secondaryText }}
                 >
                   {projectsHeader["description"]}
-                </p>
+                </p> */}
+                <RegistrationForm theme={theme} />
               </div>
             </div>
           </Fade>
         </div>
-        <div className="repo-cards-div-main">
+    
+        {/* <div className="repo-cards-div-main">
           {ProjectsData.data.map((repo) => {
             return <GithubRepoCard repo={repo} theme={theme} />;
           })}
-        </div>
-        <Button
-          text={"More Projects"}
-          className="project-button"
-          href={greeting.githubProfile}
-          newTab={true}
-          theme={theme}
-        />
-
-        {/* Publications  */}
-        {publications.data.length > 0 ? (
-          <div className="basic-projects">
-            <Fade bottom duration={2000} distance="40px">
-              <div className="publications-heading-div">
-                <div className="publications-heading-text-div">
-                  <h1
-                    className="publications-heading-text"
-                    style={{ color: theme.text }}
-                  >
-                    {publicationsHeader.title}
-                  </h1>
-                  <p
-                    className="projects-header-detail-text subTitle"
-                    style={{ color: theme.secondaryText }}
-                  >
-                    {publicationsHeader["description"]}
-                  </p>
-                </div>
-              </div>
-            </Fade>
-          </div>
-        ) : null}
-
-        <div className="repo-cards-div-main">
-          {publications.data.map((pub) => {
-            return <PublicationCard pub={pub} theme={theme} />;
-          })}
-        </div>
-
+        </div> */}
+        <Fade bottom duration={2000} distance="40px">
+          <PricingTable  highlightColor='#1976D2'>
+            <PricingSlot  onClick={this.submit} buttonText='TRY IT FREE' title='FREE' priceText='$0/month'>
+              <PricingDetail> <b>15</b> projects</PricingDetail>
+              <PricingDetail> <b>5 GB</b> storage</PricingDetail>
+              <PricingDetail> <b>5</b> users</PricingDetail>
+              <PricingDetail strikethrough> <b>Time tracking</b></PricingDetail>
+            </PricingSlot>
+            <PricingSlot highlighted onClick={this.submit} buttonText='SIGN UP' title='BASIC' priceText='$24/month'>
+                <PricingDetail> <b>35</b> projects</PricingDetail>
+                <PricingDetail> <b>15 GB</b> storage</PricingDetail>
+                <PricingDetail> <b>Unlimited</b> users</PricingDetail>
+                <PricingDetail> <b>Time tracking</b></PricingDetail>
+            </PricingSlot>
+            <PricingSlot  onClick={this.submit} buttonText='SIGN UP' title='PROFESSIONAL' priceText='$99/month'>
+                <PricingDetail> <b>100</b> projects</PricingDetail>
+                <PricingDetail> <b>30 GB</b> storage</PricingDetail>
+                <PricingDetail> <b>Unlimited</b> users</PricingDetail>
+                <PricingDetail> <b>Time tracking</b></PricingDetail>
+            </PricingSlot>
+            <PricingSlot  onClick={this.submit} buttonText='SIGN UP' title='ENTERPRISE' priceText='$200/month'>
+                <PricingDetail> <b>Unlimited</b> projects</PricingDetail>
+                <PricingDetail> <b>75 GB</b> storage</PricingDetail>
+                <PricingDetail> <b>Unlimited</b> users</PricingDetail>
+                <PricingDetail> <b>Time tracking</b></PricingDetail>
+            </PricingSlot>
+        </PricingTable>
+      </Fade>
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />
       </div>

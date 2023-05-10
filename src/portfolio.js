@@ -19,8 +19,8 @@ const seo = {
 
 //Home Page
 const greeting = {
-  title: "bData",
-  logo_name: "dData",
+  title: "VetDat",
+  logo_name: "VetDat",
   nickname: "",
   subTitle:
     "Nền tảng quản lý phòng khám và dịch vụ thú cưng online hàng đầu Việt Nam",
@@ -667,7 +667,7 @@ const experience = {
 
 // Projects Page
 const projectsHeader = {
-  title: "Projects",
+  title: "Đăng ký dùng thử",
   description:
     "My projects makes use of vast variety of latest technology tools. My best experience is to create Data Science projects and deploy them to web applications using cloud infrastructure.",
   avatar_image_path: "projects_image.svg",
